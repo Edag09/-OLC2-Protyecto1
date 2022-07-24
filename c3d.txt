@@ -1,0 +1,126 @@
+#include <stdio.h>
+#include <math.h>
+double STACK[30101999];
+double HEAP[30101999];
+double P;
+double H;
+double t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12;
+
+void imprimir_variable(){
+t8 = STACK[(int)P];
+L0:
+t9 = HEAP[(int)t8];
+if (t9 != -1) goto L1;
+goto L2;
+L1:
+printf("%c", (char)t9);
+t8=t8 + 1;
+goto L0;
+L2:
+printf("%c\n", (char)32);
+return;
+}
+
+void imprimir_var_int(){
+t10 = STACK[(int)P];
+printf("%f\n", t10);return;
+}
+
+void imprimir_string(){
+t11 = P;
+L3:
+t12 = HEAP[(int)t11];
+if (t12 != -1) goto L4;
+goto L5;
+L4:
+printf("%c", (char)t12);
+t11=t11 + 1;
+goto L3;
+L5:
+printf("%c\n", (char)32);
+return;
+}
+
+
+int main(){
+
+t0 = 4;
+t1 = 3;
+t2 = pow(t0,t1);
+t3 = 0 + 0;
+P = t3;
+STACK[(int)P] = t2 ;
+t4 = H;
+HEAP[(int)H] = 34;
+H = H + 1;
+HEAP[(int)H] = 69;
+H = H + 1;
+HEAP[(int)H] = 108;
+H = H + 1;
+HEAP[(int)H] = 32;
+H = H + 1;
+HEAP[(int)H] = 118;
+H = H + 1;
+HEAP[(int)H] = 97;
+H = H + 1;
+HEAP[(int)H] = 108;
+H = H + 1;
+HEAP[(int)H] = 111;
+H = H + 1;
+HEAP[(int)H] = 114;
+H = H + 1;
+HEAP[(int)H] = 32;
+H = H + 1;
+HEAP[(int)H] = 100;
+H = H + 1;
+HEAP[(int)H] = 101;
+H = H + 1;
+HEAP[(int)H] = 32;
+H = H + 1;
+HEAP[(int)H] = 108;
+H = H + 1;
+HEAP[(int)H] = 97;
+H = H + 1;
+HEAP[(int)H] = 32;
+H = H + 1;
+HEAP[(int)H] = 118;
+H = H + 1;
+HEAP[(int)H] = 97;
+H = H + 1;
+HEAP[(int)H] = 114;
+H = H + 1;
+HEAP[(int)H] = 105;
+H = H + 1;
+HEAP[(int)H] = 97;
+H = H + 1;
+HEAP[(int)H] = 98;
+H = H + 1;
+HEAP[(int)H] = 108;
+H = H + 1;
+HEAP[(int)H] = 101;
+H = H + 1;
+HEAP[(int)H] = 32;
+H = H + 1;
+HEAP[(int)H] = 101;
+H = H + 1;
+HEAP[(int)H] = 115;
+H = H + 1;
+HEAP[(int)H] = 58;
+H = H + 1;
+HEAP[(int)H] = 32;
+H = H + 1;
+HEAP[(int)H] = 34;
+H = H + 1;
+HEAP[(int)H] = -1;
+H = H + 1;
+P = t4;
+imprimir_string();
+t6 = 0 + 0;
+P = t6;
+t5 = STACK[(int)P];
+t7 = 0 + 0;
+P = t7;
+imprimir_var_int();
+
+    return 0;
+}
